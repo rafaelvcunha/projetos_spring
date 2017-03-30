@@ -23,15 +23,15 @@
 
 	<!-- Read a csv file -->
 	<property name="resource" value="classpath:csv/report.csv" />
-
+	<property name="linesToSkip" value="1" />
+	<property name="strict" value="false" />
 	<property name="lineMapper">
 		<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
 		  <!-- split it -->
 		  <property name="lineTokenizer">
-		        <bean
-			  class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
-				<property name="names" value="date,impressions,clicks,earning" />
-			</bean>
+	      		<bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+		  			<property name="names" value="date,impressions,clicks,earning" />
+		  		</bean>
 		  </property>
 		  <property name="fieldSetMapper">
 		         <!-- return back to reader, rather than a mapped object. -->
@@ -39,8 +39,7 @@
 			 <bean class="org.springframework.batch.item.file.mapping.PassThroughFieldSetMapper" />
 		          -->
 			  <!-- map to an object -->
-			  <bean
-			    class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
+			  <bean class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
 				<property name="prototypeBeanName" value="report" />
 			  </bean>
 		  </property>
