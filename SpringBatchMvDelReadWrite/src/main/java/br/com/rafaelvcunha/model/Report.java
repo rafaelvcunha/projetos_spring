@@ -31,5 +31,5 @@ public class Report {
 	public void setEarning(String earning) {
 		this.earning = earning;
 	}
-	
+
 }

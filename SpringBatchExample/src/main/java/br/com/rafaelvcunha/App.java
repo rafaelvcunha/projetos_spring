@@ -8,7 +8,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
-  public static void main(String[] args) {
+  private static ApplicationContext context;
+
+public static void main(String[] args) {
 
 	String[] springConfig  =
 		{	"spring/batch/config/database.xml",
@@ -16,8 +18,7 @@ public class App {
 			"spring/batch/jobs/job-report.xml"
 		};
 
-	ApplicationContext context =
-		new ClassPathXmlApplicationContext(springConfig);
+	context = new ClassPathXmlApplicationContext(springConfig);
 
 	JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
 	Job job = (Job) context.getBean("reportJob");
