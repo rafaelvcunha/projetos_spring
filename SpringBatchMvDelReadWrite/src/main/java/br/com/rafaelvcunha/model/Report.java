@@ -1,35 +1,94 @@
 package br.com.rafaelvcunha.model;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
 public class Report {
 	
-	private String date;
-	private String impressions;
-	private String clicks;
-	private String earning;
+	private int id;
+	private BigDecimal sales;
+	private int qty;
+	private String staffName;
+	private Date date;
 	
-	public String getDate() {
-		return date;
-	}
-	public void setDate(String date) {
-		this.date = date;
-	}
-	public String getImpressions() {
-		return impressions;
-	}
-	public void setImpressions(String impressions) {
-		this.impressions = impressions;
-	}
-	public String getClicks() {
-		return clicks;
-	}
-	public void setClicks(String clicks) {
-		this.clicks = clicks;
-	}
-	public String getEarning() {
-		return earning;
-	}
-	public void setEarning(String earning) {
-		this.earning = earning;
+	
+	
+	
+	public int getId() {
+		return id;
 	}
 
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+
+	public BigDecimal getSales() {
+		return sales;
+	}
+
+
+
+
+	public void setSales(BigDecimal sales) {
+		this.sales = sales;
+	}
+
+
+
+
+	public int getQty() {
+		return qty;
+	}
+
+
+
+
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+
+
+
+
+	public String getStaffName() {
+		return staffName;
+	}
+
+
+
+
+	public void setStaffName(String staffName) {
+		this.staffName = staffName;
+	}
+
+
+
+
+	public Date getDate() {
+		return date;
+	}
+
+
+
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "Report [id=" + id + ", sales=" + sales + ", qty=" + qty + ", staffName=" + staffName + ", date=" + date
+				+ "]";
+	}
+	
+	
 }

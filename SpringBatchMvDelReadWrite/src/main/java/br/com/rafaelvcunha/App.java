@@ -13,8 +13,7 @@ public class App {
 public static void main(String[] args) {
 
 	String[] springConfig  =
-		{	"spring/batch/config/database.xml",
-			"spring/batch/config/context.xml",
+		{	
 			"spring/batch/jobs/job-report.xml"
 		};
 
