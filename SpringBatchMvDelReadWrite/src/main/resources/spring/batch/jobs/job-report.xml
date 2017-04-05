@@ -111,8 +111,8 @@
 	</bean>
 	
 	<bean id="fileMoveTasklet" class="br.com.rafaelvcunha.tasklet.FileMoveTasklet" >
-		<property name="directoryIn" value="file:src/main/resources/csv/input/" />
-		<property name="directoryOut" value="file:src/main/resources/csv/input/old/" />
+		<property name="directoryIn" value="file:src/main/resources/csv/input/report.csv" />
+		<property name="directoryOut" value="file:src/main/resources/csv/input/old/report.csv" />
   	</bean>
 	
 	<bean id="fileDeletingTasklet" class="br.com.rafaelvcunha.tasklet.FileDeletingTasklet" >
