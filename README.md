@@ -34,3 +34,19 @@
 <li>http://www.mkyong.com/all-tutorials-on-mkyong-com/</li>
 <li>http://www.devmedia.com.br/spring-boot-como-criar-um-servidor-rest-com-spring-data/34006</li>
 </ul>
+
+<h2>SpringBootExample</h2>
+<h3>Projeto SpringBootExample</h3>
+<p>Projeto desenvolvido com as seguintes tecnologias:</p>
+<ul>
+<li>Maven;</li>
+<li>Spring Boot;</li>
+<li>Spring Data;</li>
+<li>MySQL/Mariadb;</li>
+<li>Web Service Rest.</li>
+</ul>
+<p>Baseado nos exemplos presentes nos sites:</p>
+<ul>
+<li>http://www.mkyong.com/all-tutorials-on-mkyong-com/</li>
+<li>http://www.devmedia.com.br/spring-boot-como-criar-um-servidor-rest-com-spring-data/34006</li>
+</ul>
