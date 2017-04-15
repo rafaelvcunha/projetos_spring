@@ -17,7 +17,7 @@ public class ReportFieldSetMapper implements FieldSetMapper<Report>{
 	public Report mapFieldSet(FieldSet fieldSet) throws BindException {
 		
 		Report report = new Report();
-		report.setId(fieldSet.readInt(0));
+		report.setId(fieldSet.readLong(0));
 		report.setSales(fieldSet.readBigDecimal(1));
 		report.setQty(fieldSet.readInt(2));
 		report.setStaffName(fieldSet.readString(3));
