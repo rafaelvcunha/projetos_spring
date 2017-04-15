@@ -6,6 +6,7 @@
 
 <h2>SpringBatchMvDelReadWrite </h2>
 <h3>Projeto SpringBatchMvDelReadWrite</h3> 
+<p>Projeto desenvolvido para trabalhar em conjunto com o SpringBootDataRestExample</p>
 <ul>
 <li>Realiza a leitura do arquivo csv com delimitador "," ignorando a primeira linha, Trata tipos de dados e armazena o dados no banco de dados MariaDB;</li>
 <li>Copia arquivo de um diretório input/ para input/old/ renomeando o mesmo;</li>
@@ -21,6 +22,8 @@
 
 <h2>SpringBootDataRestExample</h2>
 <h3>Projeto SpringBootDataRestExample</h3>
+<p>Projeto desenvolvido para trabalhar em conjunto com o SpringBatchMvDelReadWrite</p>
+<p>Sistema realiza leitura da tabela report e expõe os dados com Web Service Rest</p>
 <p>Projeto desenvolvido com as seguintes tecnologias:</p>
 <ul>
 <li>Maven;</li>
@@ -37,6 +40,7 @@
 
 <h2>SpringBootExample</h2>
 <h3>Projeto SpringBootExample</h3>
+<p>Modificado o Banco de dados do Postgres para o Mariadb, diferente do exemplo apresentado pela devmedia </p>
 <p>Projeto desenvolvido com as seguintes tecnologias:</p>
 <ul>
 <li>Maven;</li>
