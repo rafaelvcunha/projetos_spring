@@ -19,7 +19,7 @@ public interface ReportRepository extends PagingAndSortingRepository<Report, Lon
      * @param id
      * @return Report do id passado como parâmetro.
      */   
-    @Query("SELECT * FROM RAW_REPORT r where r.id = :id") 
+    @Query("SELECT r.staffName FROM Report r where r.id = :id") 
     Report findLinhaById(@Param("id") Long id);
     
     /**
