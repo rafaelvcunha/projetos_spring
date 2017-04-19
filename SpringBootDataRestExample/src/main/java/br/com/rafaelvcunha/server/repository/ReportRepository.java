@@ -19,8 +19,8 @@ public interface ReportRepository extends PagingAndSortingRepository<Report, Lon
      * @param id
      * @return Report do id passado como parâmetro.
      */   
-    @Query("SELECT r.staffName FROM Report r where r.id = :id") 
-    Report findLinhaById(@Param("id") Long id);
+    //@Query("SELECT * FROM Report r where r.id = :id") 
+    Report findAllById(@Param("id") Long id);
     
     /**
      * Método que retorna uma lista de staffName fazendo a busca pelo staffName passado como parâmetro e ordenando os 
@@ -31,5 +31,5 @@ public interface ReportRepository extends PagingAndSortingRepository<Report, Lon
      */
     List<Report> findByStaffNameOrderByStaffName(@Param("staffName") String staffName);
 
-	
+	List<Report> findByQty(@Param("qty") int qty);
 }
