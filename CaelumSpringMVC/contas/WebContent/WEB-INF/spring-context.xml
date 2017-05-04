@@ -17,4 +17,13 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
+	<bean id="conversionService"
+          class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="br.com.caelum.contas.StringToEnumConverterFactory"/>
+            </list>
+        </property>
+    </bean>
+	
 </beans>
