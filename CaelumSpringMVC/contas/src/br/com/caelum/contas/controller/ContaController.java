@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -16,6 +17,13 @@ import br.com.caelum.contas.modelo.Conta;
 
 @Controller
 public class ContaController {
+	
+	private ContaDAO dao;
+	
+	@Autowired
+	public ContaController(ContaDAO dao){
+		this.dao = dao;
+	}
 	
 	@RequestMapping(value = "/form")
 	public String form(){
@@ -29,7 +37,6 @@ public class ContaController {
 			return "formulario";
 		}
 		
-		ContaDAO dao = new ContaDAO();
 		dao.adiciona(conta);
 		
 		return "conta/conta-adicionada";
@@ -38,7 +45,6 @@ public class ContaController {
 	@RequestMapping("/listaContas")
 	public ModelAndView lista(){
 		
-		ContaDAO dao = new ContaDAO();
 		List<Conta> contas = dao.lista();
 		
 		ModelAndView mv = new ModelAndView("conta/lista");
@@ -60,7 +66,6 @@ public class ContaController {
 	@RequestMapping("/removeConta")
 	public String remove(Conta conta){
 		
-		ContaDAO dao = new ContaDAO();
 		dao.remove(conta);
 		
 		return "redirect:listaContas";
@@ -69,7 +74,6 @@ public class ContaController {
 	@RequestMapping("/mostraConta")
 	public String mostra(Long id, Model model){
 		
-		ContaDAO dao = new ContaDAO();
 		model.addAttribute("conta", dao.buscaPorId(id));
 		
 		return "conta/mostra";	
@@ -78,7 +82,6 @@ public class ContaController {
 	@RequestMapping("/alteraConta")
 	public String altera(Conta conta){
 		
-		ContaDAO dao = new ContaDAO();
 		dao.altera(conta);
 
 		return "redirect:listaContas";
@@ -88,7 +91,6 @@ public class ContaController {
 	@RequestMapping("/pagaConta")
 	public void pagar(Conta conta, HttpServletResponse response){
 		
-		ContaDAO dao = new ContaDAO();
 		dao.paga(conta.getId());
 		
 		response.setStatus(200);;
