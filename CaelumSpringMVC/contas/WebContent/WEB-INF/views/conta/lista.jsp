@@ -21,7 +21,8 @@
 	
 	function pagaAgora(id) {
     	$.post("pagaConta", {'id' : id}, function() {
-      		alert("Conta paga com sucesso");
+      		//alert("Conta paga com sucesso");
+    		$("#conta_"+id).html("Paga");
     	});
   	}
 
