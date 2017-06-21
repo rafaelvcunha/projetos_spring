@@ -1,0 +1,5 @@
+br/com/casadocodigo/loja/conf/AppWebConfiguration.class
+br/com/casadocodigo/loja/controllers/HomeController.class
+br/com/casadocodigo/loja/models/Produto.class
+br/com/casadocodigo/loja/conf/ServletSpringMvc.class
+br/com/casadocodigo/loja/controllers/ProdutosController.class
