@@ -44,8 +44,8 @@ public class ProdutosController {
     public ModelAndView gravar(@Valid Produto produto, BindingResult bindingResult , RedirectAttributes redirectAttributes) {
 		
         if(bindingResult.hasErrors()){
-        	//return form();
-        	return new ModelAndView("redirect:produtos/form");
+        	return form();
+        	//return new ModelAndView("produtos/form");
         }
 		
         produtoDAO.gravar(produto);
