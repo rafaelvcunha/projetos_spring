@@ -32,7 +32,7 @@ public class ProdutosController {
 	}
 	
 	@RequestMapping("/form")
-	public ModelAndView form(){
+	public ModelAndView form(Produto produto){
 		
 		ModelAndView modelAndView = new ModelAndView("produtos/form");
 		modelAndView.addObject("tipos", TipoPreco.values());
@@ -44,7 +44,7 @@ public class ProdutosController {
     public ModelAndView gravar(@Valid Produto produto, BindingResult bindingResult , RedirectAttributes redirectAttributes) {
 		
         if(bindingResult.hasErrors()){
-        	return form();
+        	return form(produto);
         	//return new ModelAndView("produtos/form");
         }
 		

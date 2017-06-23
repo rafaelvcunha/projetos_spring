@@ -19,11 +19,13 @@ public class ProdutoValidation implements Validator {
 		
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "titulo", "field.required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "descricao", "field.required");
-		
+				
 		Produto produto = (Produto) target;
 		if(produto.getPaginas() <= 0){
 			errors.rejectValue("paginas", "field.required");
 		}
+		
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dataLancamento", "field.required");
 		
 	}
 
