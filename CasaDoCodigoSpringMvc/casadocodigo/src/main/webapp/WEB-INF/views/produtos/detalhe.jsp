@@ -13,8 +13,7 @@
 			type="image/ico" />
 		<link href="https://plus.googlecom/108540024862647200608"
 			rel="publisher"/>
-		<title>Livros de Java, SOA, Android, iPhone, Ruby on Rails e
-			muito mais - Casa do Código</title>
+		<title>${produto.titulo} - Casa do Código</title>
 		<link href="${contextPath}resources/css/cssbase-min.css"
 			rel="stylesheet" type="text/css" media="all" />
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
@@ -39,7 +38,7 @@
 	    	rel="stylesheet" type="text/css"  media="all"  />
 		<link rel="canonical" href="http://www.casadocodigo.com.br/" />	
 </head>
-<body>
+<body class="produto">
 
   <header id="layout-header">
 		<div class="clearfix container">
@@ -49,7 +48,7 @@
 				<nav id="main-nav">
 					
 					<ul class="clearfix">
-						<li><a href="/cart" rel="nofollow">Carrinho</a></li>
+						<li><a href="/carrinho" rel="nofollow">Carrinho</a></li>
 
 						<li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre Nós</a></li>
 
@@ -78,11 +77,13 @@
 		</ul>
 	</nav>
 
-	<article id="livro-css-eficiente">
+	
+	
+	<article id="${produto.id}">
 		  <header id="product-highlight" class="clearfix">
 		    <div id="product-overview" class="container">
 		      <img width="280px" height="395px" src="http://cdn.shopify.com/s/files/1/0155/7645/products/css-eficiente-featured_large.png?v=1435245145" class="product-featured-image" />
-		      <h1 class="product-title">AQUI COLOQUE O TÍTULO</h1>
+		      <h1 class="product-title" itemprop="name">${produto.titulo}</h1>
 		      <p class="product-author">
 		        <span class="product-author-link">
 		          
@@ -90,25 +91,30 @@
 		      </p>	
 			
 		    <p class="book-description">
-		    	AQUI COLOQUE A DESCRIÇÃO
+		    	${produto.descricao}
 		    </p>
 		    </div>
 		  </header>
 	
 	  
 	  <section class="buy-options clearfix">  
-	  <form action="/cart/add" method="post" class="container">
+	  <form action="/carrinho/add" method="post" class="container">
 	    <ul id="variants" class="clearfix">
+	    	
+	    	<input type="hidden" value="${produto.id}" value="produtoId" />
+	    	<c:forEach items="" var="preco">
 	    	  <li class="buy-option">
-	            <input type="radio" name="id" class="variant-radio" id="product-variant-9720393823" value="9720393823"  checked="checked"  />
-	            <label  class="variant-label" for="product-variant-9720393823">
-	              E-book + Impresso 
+	            <input type="radio" name="${produto.titulo}" class="variant-radio" id="${produto.id}" value="${preco.tipo}"  checked="checked"  />
+	            <label  class="variant-label">
+	              ${preco.tipo} 
 	            </label>
 	            <small class="compare-at-price">R$ 39,90</small>
 	            <p class="variant-price">R$ 29,90</p>
 	          </li>           
+	    	</c:forEach>
+	    
 	    </ul>
-	    <button type="submit" class="submit-image icon-basket-alt" alt="Compre Agora" title="Compre Agora"></button>
+	    <button type="submit" class="submit-image icon-basket-alt" alt="Compre Agora" title="Compre Agora ${produto.titulo}"></button>
 	    
 	  </form>
 	  
