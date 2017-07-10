@@ -97,7 +97,7 @@
 		  </header>
 	
 	  
-	  <section class="buy-options clearfix">  
+	<section class="buy-options clearfix">  
 	  <form action="/carrinho/add" method="post" class="container">
 	    <ul id="variants" class="clearfix">
 	    	
@@ -109,7 +109,7 @@
 	              ${preco.tipo} 
 	            </label>
 	            <small class="compare-at-price">R$ 39,90</small>
-	            <p class="variant-price">R$ 29,90</p>
+	            <p class="variant-price">${preco.valor}</p>
 	          </li>           
 	    	</c:forEach>
 	    
@@ -129,9 +129,9 @@
 	  
 	  <section class="data product-detail">
 	    <h2 class="section-title">Dados do livro:</h2>
-	    <p>Número de páginas: <span>AQUI O NÚMERO DE PÁGINAS</span></p>
+	    <p>Número de páginas: <span>${produto.paginas}</span></p>
 	    <p></p>
-	    <p>Data de publicação: AQUI A DATA DE PUBLICAÇÃO </p>
+	    <p>Data de publicação: ${produto.dataLancamento} </p>
 	    <p>Encontrou um erro? <a href='/submissao-errata' target='_blank'>Submeta uma errata</a></p>
 	  </section>
 	</div>
