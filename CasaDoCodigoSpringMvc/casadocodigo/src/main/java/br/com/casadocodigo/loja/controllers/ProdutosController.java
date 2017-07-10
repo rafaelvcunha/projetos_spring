@@ -80,10 +80,4 @@ public class ProdutosController {
 	  modelAndView.addObject("produto",produto);
 	  return modelAndView;
 	}
-//	
-//	@RequestMapping("/detalhe")
-//	public ModelAndView detalhe(Integer id) {
-//	  ModelAndView modelAndView = new ModelAndView("produtos/detalhe");
-//	  return modelAndView;
-//	}
 }
