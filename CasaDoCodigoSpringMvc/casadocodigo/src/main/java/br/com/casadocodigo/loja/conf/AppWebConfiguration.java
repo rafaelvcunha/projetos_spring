@@ -27,11 +27,13 @@ public class AppWebConfiguration extends WebMvcConfigurerAdapter{
 	@Bean
 	public InternalResourceViewResolver internalResourceViewResolver(){
 	
-		InternalResourceViewResolver resolve = new InternalResourceViewResolver();
-		resolve.setPrefix("/WEB-INF/views/");
-		resolve.setSuffix(".jsp");
+		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+		resolver.setPrefix("/WEB-INF/views/");
+		resolver.setSuffix(".jsp");
+		//resolver.setExposeContextBeansAsAttributes(true);
+		resolver.setExposedContextBeanNames("carrinhoCompras");
 		
-		return resolve;
+		return resolver;
 	}
 	
 	@Bean
