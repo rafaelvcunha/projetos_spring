@@ -50,7 +50,7 @@
 				<nav id="main-nav">
 					
 					<ul class="clearfix">
-						<li><a href="/carrinho" rel="nofollow">Carrinho (${carrinhoCompras.quantidade}) </a></li>
+						<li><a href="${s:mvcUrl('CCC#itens').build()}" rel="nofollow">Carrinho ( ${carrinhoCompras.quantidade} )</a></li>
 
 						<li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre Nós</a></li>
 

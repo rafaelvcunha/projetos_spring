@@ -3,15 +3,18 @@ package br.com.casadocodigo.loja.models;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
 @Component
-@Scope(value= WebApplicationContext.SCOPE_SESSION)
+@Scope(value= WebApplicationContext.SCOPE_SESSION, proxyMode=ScopedProxyMode.TARGET_CLASS)
 public class CarrinhoCompras implements Serializable{
 	
 
@@ -50,4 +53,16 @@ public class CarrinhoCompras implements Serializable{
     	}
     	return total;
     }
+
+	public void remover(Integer produtoId, TipoPreco tipoPreco) {
+
+	
+		for(Iterator<Map.Entry<CarrinhoItem, Integer>> it = itens.entrySet().iterator(); it.hasNext(); ) {
+		      Map.Entry<CarrinhoItem, Integer> entry = it.next();
+		      if(produtoId == entry.getKey().getProduto().getId()) {
+		        it.remove();
+		      }
+		    }
+	
+	}
 }

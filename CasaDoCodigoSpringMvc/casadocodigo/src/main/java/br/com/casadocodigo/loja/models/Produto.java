@@ -134,9 +134,12 @@ public class Produto {
 	}
 
 
+
+
 	@Override
 	public String toString() {
-		return "Produto [titulo=" + titulo + ", descricao=" + descricao + ", paginas=" + paginas + "]";
+		return "Produto [id=" + id + ", titulo=" + titulo + ", descricao=" + descricao + ", paginas=" + paginas
+				+ ", dataLancamento=" + dataLancamento + ", precos=" + precos + ", sumarioPath=" + sumarioPath + "]";
 	}
 
 
@@ -201,7 +204,6 @@ public class Produto {
 	}
 
 
-
-
+	
 	
 }
