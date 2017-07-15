@@ -10,6 +10,7 @@ br/com/casadocodigo/loja/models/CarrinhoItem.class
 br/com/casadocodigo/loja/controllers/HomeController.class
 br/com/casadocodigo/loja/models/Produto.class
 br/com/casadocodigo/loja/daos/ProdutoDAO.class
+br/com/casadocodigo/loja/models/DadosPagamento.class
 br/com/casadocodigo/loja/infra/FileSaver.class
 br/com/casadocodigo/loja/models/Preco.class
 br/com/casadocodigo/loja/controllers/ProdutosController.class
