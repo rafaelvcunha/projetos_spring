@@ -44,7 +44,7 @@
 
   <header id="layout-header">
 		<div class="clearfix container">
-			<a href="/" id="logo">
+			<a href="${s:mvcUrl('HC#index').build()}" id="logo">
 			</a>
 			<div id="header-content">
 				<nav id="main-nav">
@@ -144,7 +144,7 @@
 		      </li>          
 		  </ul>
 		  
-		  <h2><a href="${s:mvcUrl('PC#listar').build()}">Veja todos os livros que publicamos!</a></h2>
+		  <h2><a href="${s:mvcUrl('HC#index').build()}">Veja todos os livros que publicamos!</a></h2>
 		</section> 
 
 		
