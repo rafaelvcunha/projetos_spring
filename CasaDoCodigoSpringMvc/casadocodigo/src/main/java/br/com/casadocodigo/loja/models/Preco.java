@@ -23,5 +23,8 @@ public class Preco {
 		this.valor = valor;
 	}
 	
+	public String toString() {
+	    return this.tipo.name() + " - " + this.valor;
+	}
 	
 }
