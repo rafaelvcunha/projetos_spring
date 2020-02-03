@@ -54,3 +54,20 @@
 <li>http://www.mkyong.com/all-tutorials-on-mkyong-com/</li>
 <li>http://www.devmedia.com.br/spring-boot-como-criar-um-servidor-rest-com-spring-data/34006</li>
 </ul>
+
+
+<h2>Springbootstart</h2>
+<h3>Projeto Springbootstart</h3>
+<p>Projeto criado para realizar teste com o SpringBoot 2.2, expondo serviços e conversando com banco MySQL</p>
+<p>Projeto desenvolvido com as seguintes tecnologias:</p>
+<ul>
+<li>Gradle;</li>
+<li>Spring Boot 2.2;</li>
+<li>Spring Data;</li>
+<li>MySQL/Mariadb;</li>
+<li>Web Service Rest.</li>
+</ul>
+<p>Baseado nos exemplos presentes nos sites:</p>
+<ul>
+<li>https://www.schoolofnet.com/curso/java/springboot/iniciando-com-springboot-rev-3</li>
+</ul>
