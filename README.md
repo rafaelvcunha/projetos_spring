@@ -71,3 +71,21 @@
 <ul>
 <li>https://www.schoolofnet.com/curso/java/springboot/iniciando-com-springboot-rev-3</li>
 </ul>
+
+
+<h2>RestAPI</h2>
+<h3>Projeto RestAPI</h3>
+<p>Projeto criado para realizar teste com o SpringBoot 2.2, expondo serviços e conversando com banco MySQL e documentado com Swagger2</p>
+<p>Projeto desenvolvido com as seguintes tecnologias:</p>
+<ul>
+<li>Gradle;</li>
+<li>Spring Boot 2.2;</li>
+<li>Spring Data;</li>
+<li>MySQL/Mariadb;</li>
+<li>Swaager 2</li>
+<li>Web Service Rest.</li>
+</ul>
+<p>Baseado nos exemplos presentes nos sites:</p>
+<ul>
+<li>https://www.schoolofnet.com/curso/java/springboot/spring-boot-intermediario-rev2</li>
+</ul>
